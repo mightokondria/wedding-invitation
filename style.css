@@ -1,0 +1,259 @@
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(0 0 0/0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 100%;
+}
+section,
+.foto-section {
+  background-image: url(img/bg3.jpg);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+}
+.hero ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(img/bg2.jpg);
+  z-index: -1;
+  filter: grayscale();
+  background-size: cover;
+  background-position: center;
+  object-fit: contain; */
+}
+.home {
+  background-image: url(img/bg4.jpg);
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 15rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.home h2 {
+  color: var(--pink);
+  font-family: "Sacramento", cursive;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h3 {
+  color: #444;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.home p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero {
+  min-height: 70vh;
+}
+.hero h1 {
+  font-family: "sacramento", cursive;
+  font-size: 6rem;
+}
+.hero h4 {
+  font-size: 1.6rem;
+}
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero a {
+  color: var(--pink);
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  color: white;
+  background-color: var(--pink);
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 3.2 rem;
+  font-weight: bold;
+}
+.offcanvas-title {
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.foto-tengah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* Menggunakan tinggi viewport */
+}
+
+.foto {
+  width: 200px; /* Atur lebar sesuai kebutuhan */
+  height: 200px; /* Atur tinggi sesuai kebutuhan */
+  transform: scaleX(-1) rotate(2deg);
+}
+
+.keterangan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rima {
+  text-align: end;
+}
+
+.rima h3 {
+  font-family: "Sacramento", cursive;
+  color: var(--pink);
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.fajar h3 {
+  font-family: "Sacramento", cursive;
+  color: var(--pink);
+  font-size: 3rem;
+  font-weight: 500;
+}
+.info {
+  padding: 2rem 0 0 0;
+}
+
+.text-info h2 {
+  margin-bottom: 2rem;
+}
+
+.tombol-alamat {
+  background-color: var(--pink);
+  color: white;
+}
+
+.tombol-alamat :hover {
+  background-color: white;
+  color: var(--pink);
+}
+
+.waktu {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.akad ul {
+  list-style-type: none;
+}
+.resepsi h3 {
+  text-align: end;
+}
+
+.resepsi ul {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.rsvp {
+  background-color: #0a0a0a;
+  color: white;
+  overflow: hidden;
+}
+
+.konteks {
+  padding: 5rem;
+  text-align: center;
+}
+
+/* media query */
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+/* @media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 0px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 15px;
+    height: 120px;
+  }
+} */
+/* mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 0px;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 15px;
+    height: 120px;
+    object-fit: contain; /* Menambahkan properti ini */
+  }
+  .hero ::before {
+    height: 70%;
+  }
+
+  .home h2 {
+    font-size: 3rem;
+  }
+
+  .foto {
+    width: 130px; /* Atur lebar sesuai kebutuhan */
+    height: 130px; /* Atur tinggi sesuai kebutuhan */
+  }
+  .foto-tengah {
+    height: 20vh; /* Menggunakan tinggi viewport */
+  }
+  .keterangan {
+    flex-direction: column;
+  }
+
+  .tombol-alamat {
+    font-size: 10px;
+    background-color: var(--pink);
+    color: white;
+  }
+  .waktu {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
